@@ -1,10 +1,19 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/* /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+}
+
+/* Index Section/Welcome/Search */
+#index-section {
+  /* border: 2px solid black; */
+  width: 100%;
+  padding: 60px;
+  /* margin-top: 10px; */
+  background-color: rgba(129, 164, 194, 0.425);
 }
 
 /* Sticky footer styles
@@ -43,8 +52,24 @@ html {
 
 body {
   /* Margin bottom by footer height */
+  font-family: 'Acme', sans-serif;
   margin-bottom: 60px;
+  /* background-image: url(https://i.imgur.com/86JUy87.jpg); */
+  background: #d3d3d3;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+.display-4, h1 {
+color: black;
+}
+
+p {
+  color: black;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -53,4 +78,111 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.footer border-top footer text-muted {
+  color: black;
+}
+
+/* Search Bar */
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: none;
+  width: 40%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: none;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* INDEX PAGES FOR LOCATION AND MACHINES */
+
+.getAll 
+{
+  color: black;
+}
+
+.card-title text-light {
+  font-size:100px;
+}
+
+.link
+{
+  color: black; 
+}
+
+.card-title{
+  color: white;
+  padding: 20px;
+  font-size: 60px;
 }

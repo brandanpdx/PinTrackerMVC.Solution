@@ -1,18 +1,26 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>All Machines</h1>
-@foreach(Machine machine in Model)
-{
-<ol>
-    <ul>
-        <li>Machine Name: @machine.name</li>
-        <li>Manufacturer: @machine.manufacturer</li>
-        <li>Year: @machine.year</li>
-        <li>Website: @machine.ipdb_link</li>
-    </ul>
-    <br>
+<div class="card">
+    <img class="img-fluid card-img" src="https://i.imgur.com/lJPf7Ea.png">
+    <div class="card-img-overlay d-flex">
+      <div class="my-auto mx-auto text-center">
+        <h1 class="card-title text-light">All Machines in Portland</h1>
+      </div>
+    </div>
+  </div>
 
-</ol>
 
-}
+
+<div class="card">
+  <div class="row">
+      @foreach(Machine machine in Model)
+      {
+        <div class="col-md-3 col-lg-2" >
+          <ul>
+            <li>@Html.ActionLink($"{@machine.name}", "Details", "Machines", new {machId = @machine.id }, new { @class= "link"})</li>
+          </ul>
+        </div>
+      }
+  </div>
+</div>
